@@ -59,6 +59,8 @@ if (!$existingPrices) {
 }
 
 // Output the prices
+$output = [];
 foreach ($existingPrices["prices"] as $id => $price) {
-    echo "$id $price" . PHP_EOL;
+    $output[] = "$id $price";
 }
+echo implode("\n", $output);
